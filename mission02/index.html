@@ -9,18 +9,36 @@
   <title>가위 바위 보 앱</title>
 </head>
 
-<body>
-  <h1>가위 바위 보</h1>
-  <h3>플레이어<span>0</span></h3>
-  <h3>컴퓨터<span>0</span></h3>
-  <h3>선택하기</h3>
-  <p>남은 횟수: <span>0</span></p>
-  <div>
-    <button>가위</button>
-    <button>바위</button>
-    <button>보</button>
+<body class="h-screen flex flex-col items-center justify-center bg-[#F08080] text-white">
+  <h1 class="text-6xl mb-16">가위 바위 보</h1>
+
+  <div class="flex justify-center gap-32 text-2xl mb-8">
+    <div>
+      <h3>플레이어</h3>
+      <span class="text-4xl flex justify-center playerScore">0</span>
+    </div>
+    <div>
+      <h3>컴퓨터</h3>
+      <span class="text-4xl flex justify-center computerScore">0</span>
+    </div>
   </div>
-  <p>컴퓨터 승리</p>
+
+  <div class="playGame flex flex-col items-center">
+    <h3 class="text-4xl mb-4">선택하기</h3>
+    <p class="text-xl mb-8">남은 횟수: <span class="savedTries">10</span></p>
+    <div class="flex gap-16 mb-8">
+      <button class="bg-[#87CEEB] text-black px-8 py-4 rounded-lg hover:bg-[#5F9EA0]">가위</button>
+      <button class="bg-[#87CEEB] text-black px-8 py-4 rounded-lg hover:bg-[#5F9EA0]">바위</button>
+      <button class="bg-[#87CEEB] text-black px-8 py-4 rounded-lg hover:bg-[#5F9EA0]">보</button>
+    </div>
+    <p class="resultMessage"></p>
+  </div>
+
+  <div class="view flex flex-col items-center hidden">
+    <p class="text-4xl font-bold">게임 종료!</p>
+    <p class="text-4xl my-8 text-[#ea3323] font-bold">게임에서 졌습니다.</p>
+    <button class="restart bg-[#87CEEB] text-black px-8 py-4 rounded-lg hover:bg-[#5F9EA0]">다시 시작</button>
+  </div>
 </body>
 
 </html>
