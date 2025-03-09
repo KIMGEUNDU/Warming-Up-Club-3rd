@@ -68,7 +68,16 @@ function playGame(playerChoice) {
     hidden.classList.add('hidden');
 
     const view = document.querySelector('.view');
+    const result = document.querySelector('.result');
     view.classList.remove('hidden');
+
+    if (playerScore > computerScore) {
+      result.textContent = '게임에서 이겼습니다.';
+    } else if (playerScore < computerScore) {
+      result.textContent = '게임에서 졌습니다.';
+    } else {
+      result.textContent = '비겼습니다.';
+    }
 
     const restartButton = document.querySelector('.restart');
     restartButton.addEventListener('click', () => {
