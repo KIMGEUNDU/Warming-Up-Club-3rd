@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>퀴즈 앱</title>
+  <script src="../home.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="script.js" defer></script>
+</head>
+
+<body class="flex justify-center items-center min-h-screen font-sans bg-gray-100">
+  <div class="bg-white p-8 rounded-lg shadow-lg w-[90%] max-w-[500px]">
+    <div id="questionContainer" class="">
+      <div id="question" class="text-2xl mb-6 font-bold text-center"></div>
+      <div id="options" class="grid grid-cols-2 gap-4 mb-4">
+      </div>
+    </div>
+    <div id="feedback" class="mt-4 p-2 text-center rounded hidden"></div>
+    <div id="result" class="flex flex-col items-center gap-5 hidden">
+      <p class="text-xl font-bold">
+        5문제 중에 <span id="correct"></span> 문제를 맞추셨습니다.
+      </p>
+      <button id="restart" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">다시 시작</button>
+    </div>
+  </div>
+</body>
+
+</html>
