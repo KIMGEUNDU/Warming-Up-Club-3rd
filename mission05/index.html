@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <script src="script.js" defer></script>
+  <script src="../home.js"></script>
+  <title>GitHub Finder</title>
+</head>
+
+<body class="bg-gray-100 min-h-screen p-8">
+  <div class="max-w-3xl mx-auto">
+    <!-- 헤더 -->
+    <header class="bg-gray-800 text-white p-4 rounded-t-lg">
+      <h1 class="text-3xl font-bold">GitHub Finder</h1>
+      <p class="text-gray-400">GitHub 사용자를 검색해보세요</p>
+    </header>
+
+    <!-- 검색 폼 -->
+    <div class="bg-white p-4 shadow-md">
+      <form id="searchForm" class="flex gap-2">
+        <input type="text" id="searchInput" placeholder="GitHub 사용자명 입력..."
+          class="flex-1 px-4 py-2 border rounded focus:outline-none focus:border-blue-500" required>
+        <button type="submit" class="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 focus:outline-none">
+          검색
+        </button>
+      </form>
+    </div>
+
+    <!-- 결과 표시 영역 -->
+    <div id="result" class="mt-4 bg-white rounded-lg shadow-md hidden">
+      <!-- 여기에 검색 결과가 동적으로 표시됩니다 -->
+    </div>
+
+    <!-- 로딩 표시 -->
+    <div id="loading" class="text-center p-4 hidden">
+      <p class="text-gray-600">검색 중...</p>
+    </div>
+
+    <!-- 에러 메시지 -->
+    <div id="error" class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 mt-4 hidden">
+      <!-- 에러 메시지가 여기에 표시됩니다 -->
+    </div>
+  </div>
+</body>
+
+</html>
