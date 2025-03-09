@@ -23,7 +23,7 @@ function createHomeButton() {
   });
 
   homeButton.addEventListener('click', () => {
-    window.location.href = '/';
+    window.location.href = './index.html';
   });
 
   document.body.appendChild(homeButton);
